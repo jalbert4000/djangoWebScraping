@@ -11,12 +11,11 @@ Se hizo pruebas únicas y multiples siendo el promedio el tiempo de 35 - 40 segu
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-"""
 import time
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from tkinter import *
+"""
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 #FIREFOX

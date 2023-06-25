@@ -1,5 +1,5 @@
 from django.shortcuts import render
-#from scraping.webScraping import WebScraping
+from scraping.webScraping import WebScraping
 #import re
 
 def validacionInput(idCategoria,tipoNavegador):

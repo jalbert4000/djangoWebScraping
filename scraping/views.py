@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import DeeplinkForm 
+from scraping.validations import validacionInput
 
 def webscraping(request):
 	#return render(request, 'pages/index.html')

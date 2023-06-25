@@ -30,7 +30,6 @@ class WebScraping():
 	def __init__(self,tipoNavegador):
 
 		self.tipoNavegador=tipoNavegador
-		"""
 		if tipoNavegador == 'chrome':
 			options = Options()
 			options.add_argument('--headless=new')
@@ -43,7 +42,7 @@ class WebScraping():
 			#self.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
 		if tipoNavegador == 'opera':
 			self.driver = webdriver.Chrome(service=Service(OperaDriverManager().install()), options=options)
-		"""
+		
 		#options = FirefoxOptions()
 		#options.add_argument("--headless")
 		#driver = webdriver.Firefox(options=options)

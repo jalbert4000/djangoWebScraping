@@ -52,7 +52,6 @@ class WebScraping():
 		#try:
 			#Abrimos el navegador seleccionado y lo maximizamos
 			url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
-			"""
 			driver = self.driver
 			driver.maximize_window()
 			driver.get(url)
@@ -111,7 +110,6 @@ class WebScraping():
 					time.sleep(5)
 
 			return (categoriasOK,categoriasNOEX)
-			"""
 
 		#except KeyboardInterrupt:
 		#	print("*** Stop web scraping ***")

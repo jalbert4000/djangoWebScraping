@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def home(request):
+def webscraping(request):
 	return render(request, 'pages/index.html')

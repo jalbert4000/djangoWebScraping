@@ -8,7 +8,7 @@ La primera vez debe logearse con sus accesos para tener registrado sus accesos
 Tiempo de Respuesta:
 Se hizo pruebas únicas y multiples siendo el promedio el tiempo de 35 - 40 segundos
 """
-
+"""
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
@@ -24,13 +24,14 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 #OPERA
 from webdriver_manager.opera import OperaDriverManager
-
+"""
 class WebScraping():
     
 	#Inicializo los atributos (constructor)
 	def __init__(self,tipoNavegador):
 
 		self.tipoNavegador=tipoNavegador
+		"""
 		if tipoNavegador == 'chrome':
 			options = Options()
 			options.add_argument('--headless=new')
@@ -43,7 +44,7 @@ class WebScraping():
 			#self.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
 		if tipoNavegador == 'opera':
 			self.driver = webdriver.Chrome(service=Service(OperaDriverManager().install()), options=options)
-
+		"""
 		#options = FirefoxOptions()
 		#options.add_argument("--headless")
 		#driver = webdriver.Firefox(options=options)
@@ -53,6 +54,7 @@ class WebScraping():
 		#try:
 			#Abrimos el navegador seleccionado y lo maximizamos
 			url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
+			"""
 			driver = self.driver
 			driver.maximize_window()
 			driver.get(url)
@@ -111,6 +113,7 @@ class WebScraping():
 					time.sleep(5)
 
 			return (categoriasOK,categoriasNOEX)
+			"""
 
 		#except KeyboardInterrupt:
 		#	print("*** Stop web scraping ***")

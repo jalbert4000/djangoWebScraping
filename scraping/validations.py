@@ -1,5 +1,5 @@
 from django.shortcuts import render
-#from scraping.webScraping import WebScraping
+from scraping.webScraping import WebScraping
 import re
 
 def validacionInput(idCategoria,tipoNavegador):
@@ -53,11 +53,10 @@ def validacionInput(idCategoria,tipoNavegador):
 		
 #Método de invocación a la clase principal
 def initWebScraping(idHijo=[],arrayMsnValidError=[],tipoNavegador=''):
-	#web = WebScraping(tipoNavegador)
-	#arrayRespuesta = web.execute(idHijo)
+	web = WebScraping(tipoNavegador)
+	arrayRespuesta = web.execute(idHijo)
 	arrayMsnExit = []
 	arrayMsnNoExit = []
-	"""
 	if (len(arrayRespuesta[1]) > 0):
 		arrayRespuestaNOEXT = arrayRespuesta[1]
 		categoriasNOEXITString = ",".join(arrayRespuestaNOEXT)
@@ -66,6 +65,5 @@ def initWebScraping(idHijo=[],arrayMsnValidError=[],tipoNavegador=''):
 		arrayRespuestaOK = arrayRespuesta[0]
 		categoriasOKString = "".join(arrayRespuestaOK)
 		arrayMsnExit = [categoriasOKString,"exit-field"]
-	"""
 	
 	return (arrayMsnExit,arrayMsnNoExit,arrayMsnValidError)

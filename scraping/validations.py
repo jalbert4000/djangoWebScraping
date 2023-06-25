@@ -20,7 +20,6 @@ def validacionInput(idCategoria,tipoNavegador):
 			#Caso: Se ingresó un valor vacío o un valor menor a 9 digitos
 			arrayMsnError = ["El ID "+idHijo+" ingresado no corresponde con la nomenclatura (CATG18927) de una categoría","error-field"]
 			return (arrayMsnError,arrayMsnVacio,arrayMsnValidError)
-	"""
 	else:
 		existeCondicionArray = re.search(',', idHijo)
 		if existeCondicionArray:
@@ -51,7 +50,6 @@ def validacionInput(idCategoria,tipoNavegador):
 			#Caso: Se ingresó un valor mayor a 10 digitos sin comas
 			arrayMsnError = ["La lista de IDs ingresados deben estar separados por comas (CATG18927,CATG18937,...)","error-field"]
 			return (arrayMsnError,arrayMsnVacio,arrayMsnValidError)
-	"""
 		
 #Método de invocación a la clase principal
 def initWebScraping(idHijo=[],arrayMsnValidError=[],tipoNavegador=''):

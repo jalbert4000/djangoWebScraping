@@ -1,6 +1,6 @@
 from django.urls import path
-from scraping.views import webscraping
+from scraping.views import home
 
 urlpatterns = [
-    path('',webscraping)
+    path('',home)
 ]

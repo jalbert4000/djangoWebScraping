@@ -36,3 +36,7 @@ def webscraping(request):
         form = DeeplinkForm()
 
     return render(request,'pages/index.html',{'form':DeeplinkForm,'msnEstado':msnEstado,'msnError':msnError,'msnResp':msnResp,'msnNOEXResp':msnNOEXResp,'msnNOVALResp':msnNOVALResp})
+
+
+def home(request):
+	return render(request, 'pages/index.html')

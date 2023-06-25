@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from scraping.webScraping import WebScraping
-import re
+#from scraping.webScraping import WebScraping
+#import re
 
 def validacionInput(idCategoria,tipoNavegador):
 	pattern  = "^(CATG)?([0-9]{4,5})$"
 	idHijo=idCategoria.strip()
 	arrayMsnVacio = []
 	arrayMsnValidError = []
+	"""
 	if len(idHijo) < 10 :
 		result = re.match(pattern, idHijo)
 		if result :
@@ -50,13 +51,15 @@ def validacionInput(idCategoria,tipoNavegador):
 			#Caso: Se ingresó un valor mayor a 10 digitos sin comas
 			arrayMsnError = ["La lista de IDs ingresados deben estar separados por comas (CATG18927,CATG18937,...)","error-field"]
 			return (arrayMsnError,arrayMsnVacio,arrayMsnValidError)
+	"""
 		
 #Método de invocación a la clase principal
 def initWebScraping(idHijo=[],arrayMsnValidError=[],tipoNavegador=''):
-	web = WebScraping(tipoNavegador)
-	arrayRespuesta = web.execute(idHijo)
+	#web = WebScraping(tipoNavegador)
+	#arrayRespuesta = web.execute(idHijo)
 	arrayMsnExit = []
 	arrayMsnNoExit = []
+	"""
 	if (len(arrayRespuesta[1]) > 0):
 		arrayRespuestaNOEXT = arrayRespuesta[1]
 		categoriasNOEXITString = ",".join(arrayRespuestaNOEXT)
@@ -65,5 +68,6 @@ def initWebScraping(idHijo=[],arrayMsnValidError=[],tipoNavegador=''):
 		arrayRespuestaOK = arrayRespuesta[0]
 		categoriasOKString = "".join(arrayRespuestaOK)
 		arrayMsnExit = [categoriasOKString,"exit-field"]
+	"""
 	
 	return (arrayMsnExit,arrayMsnNoExit,arrayMsnValidError)

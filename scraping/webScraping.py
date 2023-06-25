@@ -8,7 +8,7 @@ La primera vez debe logearse con sus accesos para tener registrado sus accesos
 Tiempo de Respuesta:
 Se hizo pruebas únicas y multiples siendo el promedio el tiempo de 35 - 40 segundos
 """
-"""
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
@@ -24,7 +24,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 #OPERA
 from webdriver_manager.opera import OperaDriverManager
-"""
+
 class WebScraping():
     
 	#Inicializo los atributos (constructor)

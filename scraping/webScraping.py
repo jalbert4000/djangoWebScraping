@@ -11,6 +11,7 @@ Se hizo pruebas únicas y multiples siendo el promedio el tiempo de 35 - 40 segu
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+"""
 import time
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -24,7 +25,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 #OPERA
 from webdriver_manager.opera import OperaDriverManager
-
+"""
 class WebScraping():
     
 	#Inicializo los atributos (constructor)

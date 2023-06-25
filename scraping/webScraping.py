@@ -15,7 +15,6 @@ import time
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-"""
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 #FIREFOX
@@ -24,7 +23,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 #OPERA
 from webdriver_manager.opera import OperaDriverManager
-"""
+
 class WebScraping():
     
 	#Inicializo los atributos (constructor)

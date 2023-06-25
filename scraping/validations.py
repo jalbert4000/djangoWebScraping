@@ -1,13 +1,12 @@
 from django.shortcuts import render
-from scraping.webScraping import WebScraping
-#import re
+#from scraping.webScraping import WebScraping
+import re
 
 def validacionInput(idCategoria,tipoNavegador):
 	pattern  = "^(CATG)?([0-9]{4,5})$"
 	idHijo=idCategoria.strip()
 	arrayMsnVacio = []
 	arrayMsnValidError = []
-	"""
 	if len(idHijo) < 10 :
 		result = re.match(pattern, idHijo)
 		if result :
@@ -21,6 +20,7 @@ def validacionInput(idCategoria,tipoNavegador):
 			#Caso: Se ingresó un valor vacío o un valor menor a 9 digitos
 			arrayMsnError = ["El ID "+idHijo+" ingresado no corresponde con la nomenclatura (CATG18927) de una categoría","error-field"]
 			return (arrayMsnError,arrayMsnVacio,arrayMsnValidError)
+	"""
 	else:
 		existeCondicionArray = re.search(',', idHijo)
 		if existeCondicionArray:

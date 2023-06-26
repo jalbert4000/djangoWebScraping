@@ -52,9 +52,11 @@ INSTALLED_APPS = [
     'scraping',
 ]
 
+#SERVIDOR CONFIG
+#'whitenoise.middleware.WhiteNoiseMiddleware',   --> EN MIDDLEWARE
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    #'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

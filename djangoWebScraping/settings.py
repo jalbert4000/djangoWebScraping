@@ -34,8 +34,8 @@ DEBUG = False
 
 #ALLOWED_HOSTS = []
 #PRODUCCION
-#ALLOWED_HOSTS = ['.vercel.app']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
+#ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -128,8 +128,13 @@ USE_TZ = True
 
 #STATIC_URL = 'static/'
 STATIC_URL = 'scraping/static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'scraping/static/')
 BASE_URL="https://django-web-scraping.vercel.app"
-STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
+
+MEDIA_URL = "scraping/static/imgs"
+CSS_URL = "scraping/static/css"
+JS_URL = "scraping/static/js"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -149,8 +149,8 @@ BASE_URL="https://django-web-scraping.vercel.app"
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
 STATIC_ROOT = os.path.join(BASE_DIR, "scraping/static")
 #STATIC_ROOT = BASE_DIR / "staticfiles"
-MEDIA_URL = "/imgs/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'imgs/')
+MEDIA_URL = "scraping/static/imgs/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'scraping/static/imgs/')
 CSS_URL = "scraping/static/css"
 JS_URL = "scraping/static/js"
 

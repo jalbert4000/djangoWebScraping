@@ -36,7 +36,7 @@ DEBUG = False
 
 #ALLOWED_HOSTS = []
 ##SERVIDOR CONFIG
-ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1']
 #ALLOWED_HOSTS = ['*']
 
 
@@ -58,7 +58,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -143,10 +143,12 @@ STATIC_URL = 'static/'
 #STATIC_URL = 'scraping/static/'
 
 #SERVIDOR CONFIG
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'scraping/static/')
+STATICFILES_DIRS = BASE_DIR / "static"
+#STATICFILES_DIRS = os.path.join(BASE_DIR, 'scraping/static/')
 BASE_URL="https://django-web-scraping.vercel.app"
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+#STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "scraping/static/imgs"
 CSS_URL = "scraping/static/css"
 JS_URL = "scraping/static/js"
@@ -156,7 +158,7 @@ JS_URL = "scraping/static/js"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-if os.environ.get("VERCEL"):
-    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+#if os.environ.get("VERCEL"):
+    #STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
     #pip install whitenoise
     #STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

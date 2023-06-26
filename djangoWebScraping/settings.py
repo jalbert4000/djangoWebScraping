@@ -139,11 +139,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-#STATIC_URL = 'scraping/static/'
+#STATIC_URL = 'static/'
+STATIC_URL = 'scraping/static/'
 
 #SERVIDOR CONFIG
-STATICFILES_DIRS = BASE_DIR / "static"
+STATICFILES_DIRS = BASE_DIR / "scraping/static"
 #STATICFILES_DIRS = os.path.join(BASE_DIR, 'scraping/static/')
 BASE_URL="https://django-web-scraping.vercel.app"
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')

@@ -78,7 +78,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangoWebScraping.wsgi.application'
+#WSGI_APPLICATION = 'djangoWebScraping.wsgi.application'
+# vercel_app/settings.py
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 
 # Database

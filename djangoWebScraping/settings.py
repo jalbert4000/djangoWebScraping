@@ -87,9 +87,9 @@ TEMPLATES = [
 ]
 
 #LOCAL CONFIG
-#WSGI_APPLICATION = 'djangoWebScraping.wsgi.application'
+WSGI_APPLICATION = 'djangoWebScraping.wsgi.application'
 #SERVIDOR CONFIG
-WSGI_APPLICATION = 'vercel_app.wsgi.app'
+#WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 
 # Database

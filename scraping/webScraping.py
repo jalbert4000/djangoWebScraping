@@ -19,18 +19,25 @@ class WebScraping():
 	def __init__(self,tipoNavegador):
 
 		self.tipoNavegador=tipoNavegador
-		if tipoNavegador == 'chrome':
-			options = Options()
-			options.add_argument('--headless=new')
-			options.add_argument('user-data-dir=/C/driver_nav')
-			self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		if tipoNavegador == 'firefox':
-			options = FirefoxOptions()
-			#options.add_argument("--headless")
-			driver = webdriver.Firefox(options=options)
-			#self.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
-		if tipoNavegador == 'opera':
-			self.driver = webdriver.Chrome(service=Service(OperaDriverManager().install()), options=options)
+
+		options = Options()
+		options.add_argument('--headless=new')
+		options.add_argument('user-data-dir=/C/driver_nav')
+		print('aaaaaaaaaaaaaaaaa')
+		self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+		print('bbbbbbbbbbbbbbb')
+		#if tipoNavegador == 'chrome':
+		#	options = Options()
+		#	options.add_argument('--headless=new')
+		#	options.add_argument('user-data-dir=/C/driver_nav')
+		#	self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+		#if tipoNavegador == 'firefox':
+		#	options = FirefoxOptions()
+		#	#options.add_argument("--headless")
+		#	driver = webdriver.Firefox(options=options)
+		#	#self.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
+		#if tipoNavegador == 'opera':
+		#	self.driver = webdriver.Chrome(service=Service(OperaDriverManager().install()), options=options)
 		
 		#options = FirefoxOptions()
 		#options.add_argument("--headless")
@@ -40,6 +47,7 @@ class WebScraping():
 	def execute(self, categoriasLista=[]):
 		#try:
 			#Abrimos el navegador seleccionado y lo maximizamos
+			print('ccccccccccccccccc')
 			url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
 			driver = self.driver
 			driver.maximize_window()

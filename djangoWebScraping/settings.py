@@ -66,9 +66,9 @@ MIDDLEWARE = [
 ]
 
 #LOCAL CONFIG
-#ROOT_URLCONF = 'djangoWebScraping.urls'
+ROOT_URLCONF = 'djangoWebScraping.urls'
 #SERVIDOR CONFIG
-ROOT_URLCONF = 'vercel_app.urls'
+#ROOT_URLCONF = 'vercel_app.urls'
 
 TEMPLATES = [
     {

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import os
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
 mimetypes.add_type("text/javascript", ".js", True)
@@ -33,7 +34,8 @@ DEBUG = False
 
 #ALLOWED_HOSTS = []
 #PRODUCCION
-ALLOWED_HOSTS = ['.vercel.app']
+#ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,6 +129,7 @@ USE_TZ = True
 #STATIC_URL = 'static/'
 STATIC_URL = 'scraping/static/'
 BASE_URL="https://django-web-scraping.vercel.app"
+STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

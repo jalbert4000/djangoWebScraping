@@ -1,9 +1,16 @@
 {
-    "builds": [{
-        "src": "djangoWebScraping/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.4" }
-    }],
+    "builds": [
+        {
+            "src": "djangoWebScraping/wsgi.py",
+            "use": "@vercel/python",
+            "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.4" }
+        },
+        {
+            "src": "build.sh",
+            "use": "@vercel/static-build",
+            "config": { "distDir": "staticfiles_build" }
+        }
+    ],
     "routes": [
         {
             "src": "/static/(.*)",

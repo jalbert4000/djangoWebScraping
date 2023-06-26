@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+#SERVIDOR CONFIG
 import os
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
@@ -30,11 +31,12 @@ SECRET_KEY = 'django-insecure-6ct07&86134+piirtbq75zr@#f3x=^)ydk%%(-x3-@cv=7#$n2
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
+#SERVIDOR CONFIG
 DEBUG = False
 
 #ALLOWED_HOSTS = []
-#PRODUCCION
-ALLOWED_HOSTS = ['.vercel.app']
+##SERVIDOR CONFIG
+ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
 #ALLOWED_HOSTS = ['*']
 
 
@@ -78,8 +80,9 @@ TEMPLATES = [
     },
 ]
 
+#LOCAL CONFIG
 #WSGI_APPLICATION = 'djangoWebScraping.wsgi.application'
-# vercel_app/settings.py
+#SERVIDOR CONFIG
 WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 
@@ -130,10 +133,11 @@ USE_TZ = True
 
 #STATIC_URL = 'static/'
 STATIC_URL = 'scraping/static/'
+
+#SERVIDOR CONFIG
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'scraping/static/')
 BASE_URL="https://django-web-scraping.vercel.app"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
-
 MEDIA_URL = "scraping/static/imgs"
 CSS_URL = "scraping/static/css"
 JS_URL = "scraping/static/js"

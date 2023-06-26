@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -62,7 +63,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'djangoWebScraping.urls'
+#LOCAL CONFIG
+#ROOT_URLCONF = 'djangoWebScraping.urls'
+#SERVIDOR CONFIG
+ROOT_URLCONF = 'vercel_app.urls'
 
 TEMPLATES = [
     {
@@ -131,13 +135,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_URL = 'static/'
-STATIC_URL = 'scraping/static/'
+STATIC_URL = 'static/'
+#STATIC_URL = 'scraping/static/'
 
 #SERVIDOR CONFIG
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'scraping/static/')
 BASE_URL="https://django-web-scraping.vercel.app"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 MEDIA_URL = "scraping/static/imgs"
 CSS_URL = "scraping/static/css"
 JS_URL = "scraping/static/js"
@@ -146,3 +151,8 @@ JS_URL = "scraping/static/js"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+if os.environ.get("VERCEL"):
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+    #pip install whitenoise
+    #STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

@@ -61,13 +61,11 @@ class WebScraping():
 			#CUARTA FORMA
 			#webdriver.Chrome('.\chromedriver.exe')
 			#QUINTA FORMA
-			driver_path = os.getenv('CHROMEWEBDRIVER') + 'chromedriver'
-			service = ChromeService(executable_path=driver_path)
-			driver = webdriver.Chrome(service=service)
-			#options = Options()
-			#options.add_argument('--window-size=1920,1080')
-			#options.add_argument('user-data-dir=/C/driver_nav')
-			#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+			#driver_path = os.getenv('CHROMEWEBDRIVER') + 'chromedriver'
+			#service = ChromeService(executable_path=driver_path)
+			#driver = webdriver.Chrome(service=service)
+			#SEXTA FORMA
+			driver = webdriver.Chrome()
 
 			#Concatenamos los valores rescatados
 			categoriasOK = []

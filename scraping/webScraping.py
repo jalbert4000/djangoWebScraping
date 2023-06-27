@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
@@ -59,8 +60,8 @@ class WebScraping():
 			#CUARTA FORMA
 			#webdriver.Chrome('.\chromedriver.exe')
 			#QUINTA FORMA
-			service = Service('./chromedriver.exe')
-			driver = webdriver.Chrome(service=service, options=options)
+			service = ChromeService()
+			driver = webdriver.Chrome(service=service)
 			#options = Options()
 			#options.add_argument('--window-size=1920,1080')
 			#options.add_argument('user-data-dir=/C/driver_nav')

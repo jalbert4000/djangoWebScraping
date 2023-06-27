@@ -13,6 +13,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 #OPERA
 from webdriver_manager.opera import OperaDriverManager
+import os
 
 class WebScraping():
     
@@ -60,7 +61,8 @@ class WebScraping():
 			#CUARTA FORMA
 			#webdriver.Chrome('.\chromedriver.exe')
 			#QUINTA FORMA
-			service = ChromeService()
+			driver_path = os.getenv('CHROMEWEBDRIVER') + 'chromedriver'
+			service = ChromeService(executable_path=driver_path)
 			driver = webdriver.Chrome(service=service)
 			#options = Options()
 			#options.add_argument('--window-size=1920,1080')

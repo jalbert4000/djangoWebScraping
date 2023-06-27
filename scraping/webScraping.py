@@ -48,7 +48,7 @@ class WebScraping():
 		#try:
 			#options = Options()
 			#options.add_argument('--window-size=1920,1080')
-			#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+			#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 			#'C:\driver_nav\chromedriver'
 			#driver = webdriver.Chrome(options)
 			#Abrimos el navegador seleccionado y lo maximizamos
@@ -56,11 +56,23 @@ class WebScraping():
 			#options = webdriver.ChromeOptions()
 			#options.add_argument('--window-size=1920,1080')
 			#driver = webdriver.Chrome(service=service, options=options)
-			options = Options()
-			options.add_argument('--window-size=1920,1080')
+			#options = Options()
+			#options.add_argument('--window-size=1920,1080')
 			#options.add_argument('user-data-dir=/C/driver_nav')
-			driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-			print('ccccccccccccccccc')
+			#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+			#Concatenamos los valores rescatados
+			categoriasOK = []
+			categoriasNOEX = []
+			deeplinkCat = "Categoría: "
+			deeplinkId = "ID: "
+			deeplinkEstado = "Estado: "
+			deeplinkUrl = "DL: https://api.test.tottus.cl/categories?name=&id=&landingtonewPLP=true&defaultSelectParentId=&defaultSortBy=Recomendados"
+
+			deeplink = deeplinkCat+'\n'+deeplinkId+'\n'+deeplinkEstado+'\n'+deeplinkUrl+'\n \n'
+			categoriasOK.append(deeplink)
+			
+			"""
 			url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
 			#driver = self.driver
 			driver.maximize_window()
@@ -118,7 +130,7 @@ class WebScraping():
 					deeplink = deeplinkCat+'\n'+deeplinkId+'\n'+deeplinkEstado+'\n'+deeplinkUrl+'\n \n'
 					categoriasOK.append(deeplink)
 					time.sleep(5)
-
+			"""
 			return (categoriasOK,categoriasNOEX)
 
 		#except KeyboardInterrupt:

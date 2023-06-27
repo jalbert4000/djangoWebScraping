@@ -52,7 +52,10 @@ class WebScraping():
 			options.add_argument('user-data-dir=/C/driver_nav')
 			#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 			#SEGUNDA FORMA
-			driver = webdriver.Chrome(options=options)
+			#	No se puede obtener chromedriver usando Selenium Manager;
+			#driver = webdriver.Chrome(options=options)
+			#TERCERA FORMA
+			webdriver.Chrome('C:\driver_nav\chromedriver.exe')
 			#'C:\driver_nav\chromedriver'
 			#driver = webdriver.Chrome(options)
 			#Abrimos el navegador seleccionado y lo maximizamos

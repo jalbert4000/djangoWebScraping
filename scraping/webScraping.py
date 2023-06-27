@@ -55,10 +55,9 @@ class WebScraping():
 			#	No se puede obtener chromedriver usando Selenium Manager;
 			#driver = webdriver.Chrome(options=options)
 			#TERCERA FORMA
-			webdriver.Chrome('C:\driver_nav\chromedriver.exe')
-			#'C:\driver_nav\chromedriver'
-			#driver = webdriver.Chrome(options)
-			#Abrimos el navegador seleccionado y lo maximizamos
+			#webdriver.Chrome('C:\driver_nav\chromedriver.exe')
+			#CUARTA FORMA
+			webdriver.Chrome('.\chromedriver.exe')
 			#service = Service('./chromedriver.exe')
 			#options = webdriver.ChromeOptions()
 			#options.add_argument('--window-size=1920,1080')

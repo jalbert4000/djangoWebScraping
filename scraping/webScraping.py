@@ -50,7 +50,9 @@ class WebScraping():
 			options = Options()
 			options.add_argument('--headless=new')
 			options.add_argument('user-data-dir=/C/driver_nav')
-			driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+			#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+			#SEGUNDA FORMA
+			driver = webdriver.Chrome(options=options)
 			#'C:\driver_nav\chromedriver'
 			#driver = webdriver.Chrome(options)
 			#Abrimos el navegador seleccionado y lo maximizamos

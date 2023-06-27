@@ -21,7 +21,7 @@ class WebScraping():
 	def __init__(self,tipoNavegador):
 
 		self.tipoNavegador=tipoNavegador
-
+		
 		#options = Options()
 		#options.add_argument('--headless=new')
 		#options.add_argument('user-data-dir=/C/driver_nav')
@@ -61,11 +61,11 @@ class WebScraping():
 			#CUARTA FORMA
 			#webdriver.Chrome('.\chromedriver.exe')
 			#QUINTA FORMA
-			#driver_path = os.getenv('CHROMEWEBDRIVER') + 'chromedriver'
-			#service = ChromeService(executable_path=driver_path)
-			#driver = webdriver.Chrome(service=service)
+			driver_path = '.\chromedriver'
+			service = ChromeService(executable_path=driver_path)
+			driver = webdriver.Chrome(service=service)
 			#SEXTA FORMA
-			driver = webdriver.Chrome()
+			#driver = webdriver.Chrome()
 
 			#Concatenamos los valores rescatados
 			categoriasOK = []

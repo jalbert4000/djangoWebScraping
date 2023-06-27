@@ -57,11 +57,10 @@ class WebScraping():
 			#TERCERA FORMA
 			#webdriver.Chrome('C:\driver_nav\chromedriver.exe')
 			#CUARTA FORMA
-			webdriver.Chrome('.\chromedriver.exe')
-			#service = Service('./chromedriver.exe')
-			#options = webdriver.ChromeOptions()
-			#options.add_argument('--window-size=1920,1080')
-			#driver = webdriver.Chrome(service=service, options=options)
+			#webdriver.Chrome('.\chromedriver.exe')
+			#QUINTA FORMA
+			service = Service('./chromedriver.exe')
+			driver = webdriver.Chrome(service=service, options=options)
 			#options = Options()
 			#options.add_argument('--window-size=1920,1080')
 			#options.add_argument('user-data-dir=/C/driver_nav')

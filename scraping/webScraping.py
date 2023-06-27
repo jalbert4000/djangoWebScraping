@@ -23,10 +23,9 @@ class WebScraping():
 		options = Options()
 		#options.add_argument('--headless=new')
 		options.add_argument('user-data-dir=/C/driver_nav')
-		print('aaaaaaaaaaaaaaaaa')
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		self.driver = webdriver.Chrome()
-		print('bbbbbbbbbbbbbbb')
+		#self.driver = webdriver.Chrome()
+		self.driver = webdriver.Chrome('chromedriver')
 		#if tipoNavegador == 'chrome':
 		#	options = Options()
 		#	options.add_argument('--headless=new')

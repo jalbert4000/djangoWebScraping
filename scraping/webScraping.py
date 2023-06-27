@@ -20,12 +20,12 @@ class WebScraping():
 
 		self.tipoNavegador=tipoNavegador
 
-		options = Options()
+		#options = Options()
 		#options.add_argument('--headless=new')
-		options.add_argument('user-data-dir=/C/driver_nav')
+		#options.add_argument('user-data-dir=/C/driver_nav')
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		#self.driver = webdriver.Chrome()
-		self.driver = webdriver.Chrome('C:\driver_nav\chromedriver')
+		#driver = webdriver.Chrome('C:\driver_nav\chromedriver')
 		#if tipoNavegador == 'chrome':
 		#	options = Options()
 		#	options.add_argument('--headless=new')
@@ -46,10 +46,15 @@ class WebScraping():
 
 	def execute(self, categoriasLista=[]):
 		#try:
+			options = Options()
+			options.add_argument('--window-size=1920,1080')
+			#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+			#'C:\driver_nav\chromedriver'
+			driver = webdriver.Chrome(options)
 			#Abrimos el navegador seleccionado y lo maximizamos
 			print('ccccccccccccccccc')
 			url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
-			driver = self.driver
+			#driver = self.driver
 			driver.maximize_window()
 			driver.get(url)
 			time.sleep(5)

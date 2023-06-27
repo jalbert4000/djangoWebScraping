@@ -52,10 +52,14 @@ class WebScraping():
 			#'C:\driver_nav\chromedriver'
 			#driver = webdriver.Chrome(options)
 			#Abrimos el navegador seleccionado y lo maximizamos
-			service = Service('./chromedriver.exe')
-			options = webdriver.ChromeOptions()
+			#service = Service('./chromedriver.exe')
+			#options = webdriver.ChromeOptions()
+			#options.add_argument('--window-size=1920,1080')
+			#driver = webdriver.Chrome(service=service, options=options)
+			options = Options()
 			options.add_argument('--window-size=1920,1080')
-			driver = webdriver.Chrome(service=service, options=options)
+			#options.add_argument('user-data-dir=/C/driver_nav')
+			driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 			print('ccccccccccccccccc')
 			url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
 			#driver = self.driver

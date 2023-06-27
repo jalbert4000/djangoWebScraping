@@ -52,7 +52,7 @@ class WebScraping():
 			#'C:\driver_nav\chromedriver'
 			#driver = webdriver.Chrome(options)
 			#Abrimos el navegador seleccionado y lo maximizamos
-			service = Service(executable_path=r'./chromedriver.exe')
+			service = Service('./chromedriver.exe')
 			options = webdriver.ChromeOptions()
 			options.add_argument('--window-size=1920,1080')
 			driver = webdriver.Chrome(service=service, options=options)

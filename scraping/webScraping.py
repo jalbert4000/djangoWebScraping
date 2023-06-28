@@ -53,7 +53,7 @@ class WebScraping():
 			options.add_argument('--headless=new')
 			options.add_argument('user-data-dir=/C/driver_nav')
 			#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-			#SEGUNDA FORMA
+			#SEGUNDA FORMA MOODO
 			#	No se puede obtener chromedriver usando Selenium Manager;
 			#driver = webdriver.Chrome(options=options)
 			#TERCERA FORMA

@@ -49,9 +49,9 @@ class WebScraping():
 	def execute(self, categoriasLista=[]):
 		#try:
 			#PRIMERA FORMA
-			options = Options()
-			options.add_argument('--headless=new')
-			options.add_argument('user-data-dir=/C/driver_nav')
+			#options = Options()
+			#options.add_argument('--headless=new')
+			#options.add_argument('user-data-dir=/C/driver_nav')
 			#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 			#SEGUNDA FORMA MOODO
 			#	No se puede obtener chromedriver usando Selenium Manager;
@@ -62,8 +62,12 @@ class WebScraping():
 			#webdriver.Chrome('.\chromedriver.exe')
 			#QUINTA FORMA
 			#driver_path = '.\chromedriver'
+			
 			#service = ChromeService(executable_path=driver_path)
-			driver = webdriver.Chrome()
+			service = Service()
+			options = webdriver.ChromeOptions()
+			driver = webdriver.Chrome(service=service, options=options)
+
 			#SEXTA FORMA
 			#driver = webdriver.Chrome()
 

@@ -61,9 +61,9 @@ class WebScraping():
 			#CUARTA FORMA
 			#webdriver.Chrome('.\chromedriver.exe')
 			#QUINTA FORMA
-			driver_path = '.\chromedriver'
-			service = ChromeService(executable_path=driver_path)
-			driver = webdriver.Chrome(service=service)
+			#driver_path = '.\chromedriver'
+			#service = ChromeService(executable_path=driver_path)
+			driver = webdriver.Chrome()
 			#SEXTA FORMA
 			#driver = webdriver.Chrome()
 

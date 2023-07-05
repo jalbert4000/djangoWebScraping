@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from scraping.webScraping import WebScraping
+from scraping.webScrapingTesting import WebScrapingTesting
 import re
 
 def validacionInput(idCategoria,tipoNavegador):
@@ -67,3 +68,7 @@ def initWebScraping(idHijo=[],arrayMsnValidError=[],tipoNavegador=''):
 		arrayMsnExit = [categoriasOKString,"exit-field"]
 	
 	return (arrayMsnExit,arrayMsnNoExit,arrayMsnValidError)
+
+def testingDrive():
+	web = WebScrapingTesting()
+	return 0

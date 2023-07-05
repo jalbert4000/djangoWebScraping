@@ -62,4 +62,4 @@ def webscrapingv2(request):
     else:
         form = DeeplinkForm()
 	
-    return render(request, 'pages/index.html',{'form':DeeplinkForm,'msnEstado':msnEstado,'msnError':msnError,'msnResp':msnResp,'msnNOEXResp':msnNOEXResp,'msnNOVALResp':msnNOVALResp})
+    return render(request, 'pages/indexv2.html',{'form':DeeplinkForm,'msnEstado':msnEstado,'msnError':msnError,'msnResp':msnResp,'msnNOEXResp':msnNOEXResp,'msnNOVALResp':msnNOVALResp})

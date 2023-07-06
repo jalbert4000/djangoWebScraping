@@ -22,9 +22,10 @@ class WebScraping():
 
 		self.tipoNavegador=tipoNavegador
 		options = Options()
+		#options.add_argument('--disable-dev-shm-usage')
 		options.add_argument('--headless=new')
 		#options.add_argument('user-data-dir=/C/driver_nav')
-		service = Service(executable_path='./driver_nav/chromedriver')
+		service = Service(executable_path='/driver_nav/chromedriver')
 		self.driver = webdriver.Chrome(service=service)
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		
@@ -70,9 +71,9 @@ class WebScraping():
 			#driver_path = '.\chromedriver'
 			
 			#service = ChromeService(executable_path=driver_path)
-			service = Service()
-			options = webdriver.ChromeOptions()
-			driver = webdriver.Chrome(service=service, options=options)
+			#service = Service()
+			#options = webdriver.ChromeOptions()
+			#driver = webdriver.Chrome(service=service, options=options)
 
 			#SEXTA FORMA
 			#driver = webdriver.Chrome()

@@ -21,14 +21,14 @@ class WebScraping():
 	def __init__(self,tipoNavegador):
 
 		print('aaaaaaaaaaaa')
-		print(os. getcwd())
+		print(os.getcwd())
 		print('bbbbbbbbbbbbbbbbbbb')
 		self.tipoNavegador=tipoNavegador
 		options = Options()
 		#options.add_argument('--disable-dev-shm-usage')
 		options.add_argument('--headless=new')
 		#options.add_argument('user-data-dir=/C/driver_nav')
-		service = Service(executable_path=os. getcwd()+'driver_nav/chromedriver')
+		service = Service(executable_path=os.getcwd()+'driver_nav/chromedriver')
 		self.driver = webdriver.Chrome(service=service)
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		

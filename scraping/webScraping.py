@@ -25,7 +25,8 @@ class WebScraping():
 		#options.add_argument('--headless=new')
 		#options.add_argument('--disable-dev-shm-usage')
 		#options.add_argument('user-data-dir=/C/driver_nav')
-		service = Service('driver_nav/chromedriver')
+		#service = Service(executable_path=r'./driver_nav/chromedriver.exe')
+		service = Service('./driver_nav/chromedriver.exe')
 		self.driver = webdriver.Chrome(service=service)
 
 		#service = Service(executable_path=os.path.dirname+'/driver_nav/chromedriver')

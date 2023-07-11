@@ -26,10 +26,10 @@ class WebScraping():
 		self.tipoNavegador=tipoNavegador
 		options = Options()
 		#options.add_argument('--disable-dev-shm-usage')
-		options.add_argument('--headless=new')
+		#options.add_argument('--headless=new')
 		#options.add_argument('user-data-dir=/C/driver_nav')
-		service = Service(executable_path=os.path.dirname+'/driver_nav/chromedriver')
-		self.driver = webdriver.Chrome(service=service)
+		#service = Service(executable_path=os.path.dirname+'/driver_nav/chromedriver')
+		#self.driver = webdriver.Chrome(service=service)
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		
 		#options = Options()

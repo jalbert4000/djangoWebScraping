@@ -27,7 +27,7 @@ class WebScraping():
 		#options.add_argument('user-data-dir=/C/driver_nav')
 
 		#service = Service('./driver_nav/chromedriver')
-		service = Service('/usr/local/bin/chromedriver')
+		service = Service('/app/.chromedriver/bin/chromedriver')
 		
 		self.driver = webdriver.Chrome(service=service, options=options)
 

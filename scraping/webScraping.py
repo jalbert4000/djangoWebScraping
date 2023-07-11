@@ -20,42 +20,21 @@ class WebScraping():
 	#Inicializo los atributos (constructor)
 	def __init__(self,tipoNavegador):
 
-		print('aaaaaaaaaaaa')
-		print(os.path.dirname)
-		print('bbbbbbbbbbbbbbbbbbb')
 		self.tipoNavegador=tipoNavegador
 		options = Options()
-		#options.add_argument('--disable-dev-shm-usage')
 		#options.add_argument('--headless=new')
+		#options.add_argument('--disable-dev-shm-usage')
 		#options.add_argument('user-data-dir=/C/driver_nav')
+		service = Service('driver_nav/chromedriver')
+		self.driver = webdriver.Chrome(service=service)
+
 		#service = Service(executable_path=os.path.dirname+'/driver_nav/chromedriver')
 		#self.driver = webdriver.Chrome(service=service)
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		
-		
-		#options = Options()
-		#options.add_argument('--headless=new')
-		#options.add_argument('user-data-dir=/C/driver_nav')
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		#self.driver = webdriver.Chrome()
 		#driver = webdriver.Chrome('C:\driver_nav\chromedriver')
-		#if tipoNavegador == 'chrome':
-		#	options = Options()
-		#	options.add_argument('--headless=new')
-		#	options.add_argument('user-data-dir=/C/driver_nav')
-		#	self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		#if tipoNavegador == 'firefox':
-		#	options = FirefoxOptions()
-		#	#options.add_argument("--headless")
-		#	driver = webdriver.Firefox(options=options)
-		#	#self.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
-		#if tipoNavegador == 'opera':
-		#	self.driver = webdriver.Chrome(service=Service(OperaDriverManager().install()), options=options)
-		
-		#options = FirefoxOptions()
-		#options.add_argument("--headless")
-		#driver = webdriver.Firefox(options=options)
-		#self.driver = driver
 
 	def execute(self, categoriasLista=[]):
 		#try:
@@ -82,12 +61,10 @@ class WebScraping():
 			#SEXTA FORMA
 			#driver = webdriver.Chrome()
 
-			data = os.path.dirname
-
 			#Concatenamos los valores rescatados
 			categoriasOK = []
 			categoriasNOEX = []
-			deeplinkCat = data
+			deeplinkCat = "CATEGORIA: "
 			deeplinkId = "ID: "
 			deeplinkEstado = "Estado: "
 			deeplinkUrl = "DL: https://api.test.tottus.cl/categories?name=&id=&landingtonewPLP=true&defaultSelectParentId=&defaultSortBy=Recomendados"

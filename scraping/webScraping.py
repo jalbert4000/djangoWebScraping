@@ -26,12 +26,14 @@ class WebScraping():
 		#options.add_argument('--disable-dev-shm-usage')
 		#options.add_argument('user-data-dir=/C/driver_nav')
 
-		service = ChromeService('./driver_nav/chromedriver')
+		#service = Service('./driver_nav/chromedriver')
+		service = Service('/usr/local/bin/chromedriver')
+		
 		self.driver = webdriver.Chrome(service=service, options=options)
 
 		url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
-		self.driver.get(url)
-		time.sleep(5)
+		#self.driver.get(url)
+		#time.sleep(5)
 
 		#service = Service(executable_path=os.path.dirname+'/driver_nav/chromedriver')
 		#self.driver = webdriver.Chrome(service=service)

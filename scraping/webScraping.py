@@ -21,14 +21,17 @@ class WebScraping():
 	def __init__(self,tipoNavegador):
 
 		self.tipoNavegador=tipoNavegador
-		#options = Options()
-		options = webdriver.ChromeOptions()
+		options = Options()
 		#options.add_argument('--headless=new')
 		#options.add_argument('--disable-dev-shm-usage')
 		#options.add_argument('user-data-dir=/C/driver_nav')
 
 		service = Service('./driver_nav/chromedriver')
 		self.driver = webdriver.Chrome(service=service, options=options)
+
+		url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
+		self.driver.get(url)
+		time.sleep(5)
 
 		#service = Service(executable_path=os.path.dirname+'/driver_nav/chromedriver')
 		#self.driver = webdriver.Chrome(service=service)

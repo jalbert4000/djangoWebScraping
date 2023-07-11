@@ -31,7 +31,7 @@ class WebScraping():
 		#service = Service(executable_path=os.path.dirname+'/driver_nav/chromedriver')
 		#self.driver = webdriver.Chrome(service=service)
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		self.data = os.path.dirname
+		
 		
 		#options = Options()
 		#options.add_argument('--headless=new')
@@ -82,10 +82,12 @@ class WebScraping():
 			#SEXTA FORMA
 			#driver = webdriver.Chrome()
 
+			data = os.path.dirname
+
 			#Concatenamos los valores rescatados
 			categoriasOK = []
 			categoriasNOEX = []
-			deeplinkCat = self.data
+			deeplinkCat = data
 			deeplinkId = "ID: "
 			deeplinkEstado = "Estado: "
 			deeplinkUrl = "DL: https://api.test.tottus.cl/categories?name=&id=&landingtonewPLP=true&defaultSelectParentId=&defaultSortBy=Recomendados"

@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.selenium_manager import SeleniumManager
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
@@ -40,7 +41,8 @@ class WebScraping():
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		#self.driver = webdriver.Chrome()
+		self.driver = webdriver.Chrome()
+		time.sleep(5)
 		#driver = webdriver.Chrome('C:\driver_nav\chromedriver')
 
 	def execute(self, categoriasLista=[]):
@@ -67,6 +69,8 @@ class WebScraping():
 
 			#SEXTA FORMA
 			#driver = webdriver.Chrome()
+			url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
+			self.driver.get(url)
 
 			#Concatenamos los valores rescatados
 			categoriasOK = []

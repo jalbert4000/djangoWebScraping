@@ -41,7 +41,7 @@ class WebScraping():
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		cPath = SeleniumManager.driver_location("chrome", options=options)
+		cPath = SeleniumManager.driver_location("selenium-manager --browser chrome", options=options)
 		self.driver = webdriver.Chrome(cPath)
 		time.sleep(5)
 		#driver = webdriver.Chrome('C:\driver_nav\chromedriver')

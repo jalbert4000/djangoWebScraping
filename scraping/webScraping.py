@@ -1,19 +1,19 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
-from selenium.webdriver.chrome.service import Service
+#from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.selenium_manager import SeleniumManager
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service as ChromeService
+#from webdriver_manager.chrome import ChromeDriverManager
+#from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 #FIREFOX
-from selenium.webdriver.firefox.service import Service as FirefoxService
-from webdriver_manager.firefox import GeckoDriverManager
-from selenium.webdriver.firefox.options import Options as FirefoxOptions
+#from selenium.webdriver.firefox.service import Service as FirefoxService
+#from webdriver_manager.firefox import GeckoDriverManager
+#from selenium.webdriver.firefox.options import Options as FirefoxOptions
 #OPERA
-from webdriver_manager.opera import OperaDriverManager
+#from webdriver_manager.opera import OperaDriverManager
 import os
 
 class WebScraping():
@@ -41,7 +41,8 @@ class WebScraping():
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		self.driver = webdriver.Chrome()
+		cPath = SeleniumManager.driver_location("chrome")
+		self.driver = webdriver.Chrome(cPath)
 		time.sleep(5)
 		#driver = webdriver.Chrome('C:\driver_nav\chromedriver')
 

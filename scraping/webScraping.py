@@ -24,7 +24,8 @@ class WebScraping():
 
 		self.tipoNavegador=tipoNavegador
 		options = Options()
-		#options.add_argument('--headless=new')
+		options.add_argument('--headless=new')
+		options.add_argument('--selenium-manager=true')
 		#options.add_argument('--disable-dev-shm-usage')
 		#options.add_argument('user-data-dir=/C/driver_nav')
 
@@ -44,7 +45,8 @@ class WebScraping():
 		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 		#cPath = SeleniumManager.driver_location("/path/to/binary/chromedriver",options=options)
 		#self.driver = webdriver.Chrome(cPath)
-		self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+		self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 		time.sleep(5)
 		#driver = webdriver.Chrome('C:\driver_nav\chromedriver')
 

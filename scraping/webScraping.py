@@ -38,11 +38,11 @@ class WebScraping():
 			#No veríamos cómo se abre un navegador y empieza a iterar por las páginas. Se ejecutaría en segundo plano
 			#options.add_argument('--headless=new')
 			#Le enviamos directo el options y ya no la ruta del driver ya que lo lee desde el bin directo sin necesidad de indicar lo
-			#self.driver = webdriver.Chrome(options=options)
+			self.driver = webdriver.Chrome(options=options)
 
-			driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-      		driver.get("https://www.google.com")
-      		time.sleep(10)
+			#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+      		#driver.get("https://www.google.com")
+      		#time.sleep(10)
 
 		except Exception as error:
 			print("Ha ocurrido un error con el driver del navegador:", type(error).__name__, "–", error)

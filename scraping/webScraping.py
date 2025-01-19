@@ -22,36 +22,20 @@ class WebScraping():
 	#Inicializo los atributos (constructor)
 	def __init__(self,tipoNavegador):
 
-		self.tipoNavegador=tipoNavegador
-		options = Options()
-		options.add_argument('--headless=new')
-		options.add_argument('--selenium-manager=true')
-		#options.add_argument('--disable-dev-shm-usage')
-		#options.add_argument('user-data-dir=/C/driver_nav')
-
-		#service = Service('./driver_nav/chromedriver')
-		#service = Service('/app/.chromedriver/bin/chromedriver')
-		
-		#self.driver = webdriver.Chrome(service=service, options=options)
-
-		#url = "https://admin.fazil.services/application/catalog/taxonomy/categories"
-		#self.driver.get(url)
-		#time.sleep(5)
-
-		#service = Service(executable_path=os.path.dirname+'/driver_nav/chromedriver')
-		#self.driver = webdriver.Chrome(service=service)
-		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		
-		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		#cPath = SeleniumManager.driver_location("/path/to/binary/chromedriver",options=options)
-		#self.driver = webdriver.Chrome(cPath)
-		#self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-		#self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-		#self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-		#self.driver = webdriver.Chrome(os.environ.get("/app/.chromedriver/bin/chromedriver"))
-		self.driver = webdriver.Chrome(os.environ.get("CHROMEDRIVER_PATH"))
-		time.sleep(5)
-		#driver = webdriver.Chrome('C:\driver_nav\chromedriver')
+		try:
+			self.tipoNavegador=tipoNavegador
+			options = webdriver.ChromeOptions()
+			#Inicialice el navegador chrome Maximize
+			options.add_argument("--start-maximized")
+			options.add_argument("--disable-extensions")
+			#Con esto se habilita en el chrome el history (podemos ir a validar ingresando nexflit la proxima ingresa directo) - https://www.youtube.com/watch?v=A3C39PRfV2I
+			options.add_argument('user-data-dir=/Applications/MAMP/htdocs/djangoScrapingIds/djangoScrapingIds/driver_nav/')
+			#No veríamos cómo se abre un navegador y empieza a iterar por las páginas. Se ejecutaría en segundo plano
+			#options.add_argument('--headless=new')
+			#Le enviamos directo el options y ya no la ruta del driver ya que lo lee desde el bin directo sin necesidad de indicar lo
+			self.driver = webdriver.Chrome(options=options)
+		except Exception as error:
+			print("Ha ocurrido un error con el driver del navegador:", type(error).__name__, "–", error)
 
 	def execute(self, categoriasLista=[]):
 		#try:
